@@ -23,7 +23,10 @@ def main():
             temp_dic = {'fname': fname, 'lname': lname, 'id': id_now}
             url = lname[0].lower() + '/' + lname + ':' + fname
             author = dblp.Author(url)
-            author.load_data()
+            try:
+                author.load_data()
+            except:
+                pass
             update_dic(temp_dic, author.data)
             author_pub.append(temp_dic)
 
