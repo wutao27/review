@@ -56,8 +56,6 @@ class Author(LazyAPIData):
             }
 
             self.data = data
-        else:
-            self.data = None
 
 def first_or_none(seq):
     try:
